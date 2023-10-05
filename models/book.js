@@ -4,8 +4,7 @@ if (!Object.keys(mongoose).length) return;
 
 const BooksSchema = mongoose.Schema(
   {
-    title: String,
-    commentcount: Number,
+    title: { type: String, required: true },
     comments: [String],
   },
   { timestamps: { createdAt: "submit_date" } }
